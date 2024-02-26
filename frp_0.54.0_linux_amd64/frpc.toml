@@ -9,3 +9,10 @@ type = "tcp"
 localIP = "127.0.0.1"
 localPort = 5000
 remotePort = 8000
+
+[[proxies2]]
+name = "ssh"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = "22"
+remotePort = "4223"
