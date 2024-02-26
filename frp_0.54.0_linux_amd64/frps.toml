@@ -1,2 +1,10 @@
 bindPort = 7000
 vhostHTTPPort = 8080
+auth.method = "token"
+auth.token = "20020825cty"
+
+
+webServer.addr = "0.0.0.0"
+webServer.port = 7500
+webServer.user = "tybruce"
+webServer.password = "4223"
