@@ -1,0 +1,11 @@
+serverAddr = "3.144.74.6"
+serverPort = 7000
+auth.method = "token"
+auth.token = "20020825cty"
+
+[[proxies]]
+name = "web"
+type = "tcp"
+localIP = "127.0.0.1"
+localPort = 5000
+remotePort = 8000
