@@ -1,0 +1,8 @@
+[Unit]
+Description="This is FRP server service. It can make server run in the background and auto start when booting"
+
+[Service]
+ExecStart=/home/ubuntu/frp/frp_0.54.0_linux_amd64/frps -c /home/ubuntu/frp/frp_0.54.0_linux_amd64/frps.toml
+
+[Install]
+WantedBy=multi-user.target
