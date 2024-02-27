@@ -1,0 +1,11 @@
+[Unit]
+Description=FRPC autostart backend service
+After=network.target
+
+[Service]
+ExecStart=/home/piko/Documents/github/frp_0.54.0_linux_amd64/frpc -c /home/piko/Documents/github/frp_0.54.0_linux_amd64/frpc.toml
+ReStart=always
+ReStart=30  
+
+[Install]
+WantedBy=multi-user.target

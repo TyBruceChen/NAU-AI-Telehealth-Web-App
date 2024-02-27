@@ -1,0 +1,10 @@
+[Unit]
+Description="This is the local server of nau capstone-- ai-telehealth project. Please remember to close this when do not use it"
+
+[Service]
+ExecStart=/home/piko/Documents/github/frp_0.54.0_linux_amd64/local_server.sh
+Restart=always
+RestartSec=120
+
+[Install]
+WantedBy=multi-user.target
