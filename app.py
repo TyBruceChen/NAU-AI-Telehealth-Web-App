@@ -5,6 +5,9 @@ from server_model_test import *
 from text_modification import *
 import os,time,random
 
+WORK_FOLDER = '/home/piko/Documents/Flask/'    #change the work folder to absolute path for command line execute 
+os.chdir(WORK_FOLDER)
+
 temp_img_path = 'temp_imgs'
 #temp_img_path = 'home/site/temp_imgs'   #when it's uploaded to Azure server.
 model_folder = 'models/'
