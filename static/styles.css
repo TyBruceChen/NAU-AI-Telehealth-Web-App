@@ -2,6 +2,23 @@
     color: red;
 }
 
+nav{
+    position: fixed;
+    top: 45%;
+    order: 5px solid blue;
+    background-color: rgb(155, 155, 231);
+    font-size: small;
+}
+
+.navigationbar{
+    display: flex;
+    flex-direction: column;
+}
+
+a:hover{
+    color: orange;
+}
+
 body{
     text-align: center;
 }
