@@ -1,18 +1,49 @@
+body{
+    background-color: rgb(173, 173, 223);
+    width: 100%;
+    text-align: center;
+    font-size: 110%;
+}
+
 .CSStest{
     color: red;
 }
 
-nav{
-    position: fixed;
-    top: 45%;
-    order: 5px solid blue;
-    background-color: rgb(155, 155, 231);
-    font-size: small;
-}
 
 .navigationbar{
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    position: fixed;
+    top: 0%;
+    width: 100%;
+
+    border: 3px solid rgb(19, 21, 6);
+    background-color: rgb(255, 255, 127);
+    
+
+    transform: matrix(0.6,0,0,0.7,0,0);
+    transform-origin: center;
+}
+
+#navigationitem{
+    font-size: 170%;
+    margin: 1.5%;
+}
+
+.container{
+    display: flex;
     flex-direction: column;
+    
+    background-color: rgb(212, 206, 206);
+    justify-content: center;
+    padding: 10%;
+    margin:  5%;
+
+    text-align: center;
 }
 
 a:hover{
