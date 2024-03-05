@@ -5,6 +5,6 @@ This is NAU capston: AI-Telehealth, users can get prediction of COVID19 by uploa
 ## Instruction:
 
 Install systemd:  ```sudo apt-get systemd``` <br>
-Enable systemd file.service run from booting: systemctl enable file.service <br>
+Enable systemd ```file.service``` run from booting: ```systemctl enable file.service``` <br>
 Stop/Start/Check status: repalce ```enable``` with ```stop/start/status``` <br>
 reload the systemd file service table: ```systemctl daemon-reload``` <br>
