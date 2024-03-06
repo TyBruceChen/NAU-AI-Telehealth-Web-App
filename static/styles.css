@@ -50,6 +50,7 @@ a:hover{
     color: orange;
 }
 
-body{
-    text-align: center;
+#prediction{
+    border-radius: 2px;
+    background-color: brown;
 }
