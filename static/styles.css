@@ -35,6 +35,8 @@ body{
 }
 
 .container{
+    max-width: 1500px;
+
     display: flex;
     flex-direction: column;
     
@@ -46,11 +48,38 @@ body{
     text-align: center;
 }
 
+h1{
+    background-image: url("ViT structure Paper.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 a:hover{
     color: orange;
 }
 
 #prediction{
-    border-radius: 2px;
-    background-color: brown;
+    font-size: x-large;
+    color: brown;
+}
+
+.imgUpload{
+    width: 100%;
+    color: rgb(124, 81, 0);
+    background-color: rgb(255, 202, 202);
+
+    border-radius: 25px;
+    border: 2px solid #72AD20;
+    padding: 20px;
+    width: 100%;
+    height: 120%;
+    font-size: 115%;
+}
+
+.imgUpload:hover{
+    transition-duration: 1s;
+    transition-timing-function: linear;
+
+    background-color: rgb(236, 173, 173);
 }
