@@ -19,3 +19,7 @@ reload the systemd file service table: ```systemctl daemon-reload``` <br>
 3. Bugs in client (check feed back from local Flask terminal), highly encourage for backup in each successully deployment stage
 4. Change of public IP address by Amazon, since it's free service
 5. Run incorrect frp command/configuration files
+
+Frpc client service is built successfully but local server can not be detected (close):
+
+![Screenshot from 2024-04-03 00-30-51](https://github.com/TyBruceChen/NAU-Cap-AI-Telehealth-Amazon-Web-App/assets/152252677/5425804b-c908-42fe-b6c7-41d683339e56)
