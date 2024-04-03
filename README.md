@@ -19,6 +19,7 @@ reload the systemd file service table: ```systemctl daemon-reload``` <br>
 3. Bugs in client (check feed back from local Flask terminal), highly encourage for backup in each successully deployment stage
 4. Change of public IP address by Amazon, since it's free service
 5. Run incorrect frp command/configuration files
+6. Figure out whether your service is HTTP or HTTPS! This is important since it can decide which http:// or https:// can be accessed.
 
 Frpc client service is built successfully but local server can not be detected (close):
 
