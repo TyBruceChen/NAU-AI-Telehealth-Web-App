@@ -47,14 +47,14 @@ body{
 
     text-align: center;
 }
-
+/*
 h1{
     background-image: url("ViT structure Paper.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
+*/
 a:hover{
     color: orange;
 }
