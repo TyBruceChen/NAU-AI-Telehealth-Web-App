@@ -14,7 +14,9 @@
             <p>
                 <div class="navigationbar">
                 <div id="navigationitem"><a href="/">Home</a></div>
-                <div id="navigationitem"><a href="https://sites.google.com/nau.edu/ai-telehealth/home">Project Introduction</a></div>
+                <div id="navigationitem"><a href="https://sites.google.com/nau.edu/ai-telehealth/home">Project Specificatioin</a></div>
+                <div id="navigationitem"><a href="/#System">System Experience</a></div>
+                <div id="navigationitem"><a href="/#pure-prediction">AI Diagnose Experience</a></div>
                 <div id="navigationitem"><a href="https://ceias.nau.edu/capstone/d4p/">NAU Capstone Page</a></div>
                 </div>
             </p>
@@ -23,7 +25,7 @@
 
     <div class="container">
     <main>
-        <h1>AI-Telehealth(Test Page)<sup>by Tech-health Comparator Group</sup></h1>
+        <h1>AI-Telehealth(Test Page)<sup style="font-size: medium;">by Tech-health Comparator Group</sup></h1>
         <br>
 
         <div>
@@ -32,12 +34,49 @@
         
         <hr>
         <hr>
-        <div>
-            <img src="static/dataset_img_display.png" alt="Dataset Example" width="90%">
-            <p style="text-align: center; font-size: small;">Used Dataset Examples</p>
+        <section id="System">
+        <br><br>
+        <div id="test">
+            <br>
+            <p>Currently it's just for tesing.</p>
+            <div id="test-img-download">
+                <button>
+                    <a href="static/sample_imgs/COVID-3587.png" download="COVID-you can randomly name it - Name is just for verification.png">COVID-19 Sample</a>
+                </button>
+                <button>
+                    <a href="static/sample_imgs/Lung_Opacity-5994.png" download="Lung Opacity-you can randomly name it - Name is just for verification.png">Lung Opacity Sample</a>
+                </button>
+                <button>
+                    <a href="static/sample_imgs/Normal-10182.png" download="Normal-you can randomly name it - Name is just for verification.png">Normal Sample</a>
+                </button>
+                <button>
+                    <a href="static/sample_imgs/Viral Pneumonia-1254.png" download="Viral Pneumonia-you can randomly name it - Name is just for verification.png">Viral Pneumonia (non-COVID infection) Sample</a>
+                </button>
+            </div>
+            <div id="download-test"><button><a href="static/encrypted_data.zip" download="cypher_text.zip">Download Test: this is the cypher text package from the encrypted image</a></button></div>
+            <br>
+            <hr>
+        </div>
+        </section>
+
+        <div id="system-graph">
+            <img src="static/System.png" alt="System" width="90%">
+            <p><b>The Whole System Workflow</b></p>
         </div>
 
-        <div class="imgUpload">
+        <div>
+            <img src="static/dataset_img_display.png" alt="Dataset Example" width="90%">
+            <p style="text-align: center; font-size: medium;">Dataset Samples</p>
+        </div>
+        
+        <div>
+            <img src="static/ViT structure Paper.png" alt="Our Proposed Model" width="90%">
+            <p style="text-align: center; font-size: medium;">The Proposed Model from Our Research (95.79% Accuracy)</p>
+        </div>
+        
+        <section id="pure-prediction">
+        <br><br>
+        <div id="imgUpload">
             <h2>COVID19 Detection</h2>
             <form action="/" method="post" enctype="multipart/form-data">
                 <br>
@@ -51,14 +90,22 @@
                 <input type="submit" value="Upload (after you choose file)">
             </form>        
         </div>
+        </section>
+
         <br><hr>
         <div>
-            <img src="static/ViT structure Paper.png" alt="Our Proposed Model" width="90%">
-            <p style="text-align: center; font-size: small;">Our Proposed Model</p>
-            <img src="static/Confusion Matrix.png" alt="Confusion Matrix" width="90%">
-            <p style="text-align: center; font-size: small;">Confusion Matrix (prediction accuracy of our proposed model from the test set)</p>
-            <img src="static/Acc_comparison_between_experimented_models.png" alt="Comparison" width="90%">
-            <p style="text-align: center; font-size: small;">Comparison with other state-of-the-art models (Accuracy)</p>
+            <img src="static/Confusion Matrix_ROC.png" alt="Confusion Matrix and ROC" width="90%">
+            <p style="text-align: center; font-size: medium;">Confusion Matrix and ROC curve(evaluation based on prediction accuracy)</p>
+        </div>
+        <div id="results-demo">
+            <div>
+                <img src="static/Paper Table.png" alt="Tables" width="90%"><p style="text-align: center; font-size: medium;">Performance Comparison</p>
+            </div>
+
+            <div>
+                <img src="static/Acc_comparison_between_experimented_models.png" alt="Comparison" width="90%">
+                <p style="text-align: center;">Comparison with other state-of-the-art experimented models (Accuracy)</p>
+            </div>
         </div>
 
     <br>

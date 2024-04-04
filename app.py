@@ -10,10 +10,13 @@ os.chdir(WORK_FOLDER)
 
 temp_img_path = 'temp_imgs'
 #temp_img_path = 'home/site/temp_imgs'   #when it's uploaded to Azure server.
-model_folder = 'models/'
+model_folder = 'models/' #blob folder for model saving
 model_path = os.path.join(model_folder,'Diagnosis_Model.pt') 
 model_storage_folder = model_folder
 storage_path = os.path.join(model_storage_folder,'Diagnosis_Model.pt') 
+
+sample_folder = 'imgs/'  #blob folder for sample imgs
+sample_database_name_list = os.listdir('static/sample_imgs')  #the samples images contained in local should be exact same as in the blob server
 
 app = Flask(__name__)
 
