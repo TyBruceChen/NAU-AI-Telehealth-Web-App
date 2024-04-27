@@ -3,6 +3,7 @@ from flask import Flask,url_for,render_template,request
 from blob_storage import *
 from server_model_test import *
 from text_modification import *
+from GradCAM import GradCAM
 import os,time,random
 
 WORK_FOLDER = '/home/piko/Documents/Flask/'    #change the work folder to absolute path for command line execute 
@@ -17,6 +18,8 @@ storage_path = os.path.join(model_storage_folder,'Diagnosis_Model.pt')
 
 sample_folder = 'imgs/'  #blob folder for sample imgs
 sample_database_name_list = os.listdir('static/sample_imgs')  #the samples images contained in local should be exact same as in the blob server
+
+result_visualization_replace_frame = "id=\"resultViz\" src=\"static/Confusion Matrix.png\" style=\"display: none;"
 
 app = Flask(__name__)
 
@@ -56,7 +59,7 @@ def file_handle():
                 print(upload_name) #see the name of uploaded file
                 upload_name = upload_name.split('.')[0]
 
-                img_name = str(upload_name) + str(int(random.random()*1000)) + '.png'
+                img_name = str(upload_name) + str(int(random.random()*10000)) + '.png'
                 file_name = os.path.join( temp_img_path,img_name)    #temperaryly save the img on local
                 file.save(file_name)
                 # the initial idea is to save the file then read as binary type
@@ -68,7 +71,13 @@ def file_handle():
                 try:
                     img = img_process(file_name)    #read the img, reshape, and normalize
                     y = server_model(img)   #prediction
-
+                    cam = GradCAM(server_model,file_name,layer_idx=6,model_type = 'ViT')
+                    cam()
+                    print('Here')
+                    Viz_save_path = os.path.join('static','temp_viz',img_name)
+                    print(Viz_save_path)
+                    cam.imposing_visualization(Viz_save_path)
+                    updateViz = f"id=\"resultViz\" src=\"{Viz_save_path}\" style=\"display: block;"
                     try:
                         os.remove(file_name)
                         print('Server File deleted.')
@@ -77,13 +86,15 @@ def file_handle():
 
                     result = int(y.argmax())
                     print(lung_type(result))
-                    html_update = text_modification(replaced_element= 'waiting to be uploaded')
-                    return html_update.replace_content(lung_type(result))
+                    html_update = text_modification()
+
+                    html_update.replace_content(updateViz,result_visualization_replace_frame)
+                    return html_update.replace_content(lung_type(result),replaced_element= 'waiting to be uploaded')
                 except:
                     print('Fail to loaad the image')
                     print('Please don not upload empty file!')
-                    html_update =  text_modification(replaced_element= 'waiting to be uploaded')
-                    return html_update.replace_content('Error! Please don not upload empty file! ')
+                    html_update =  text_modification()
+                    return html_update.replace_content('Error! Please don not upload empty file! ',replaced_element= 'waiting to be uploaded')
 
             except:
                 pass
