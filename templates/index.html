@@ -13,11 +13,11 @@
        <nav>
             <p>
                 <div class="navigationbar">
-                <div id="navigationitem"><a href="/">Home</a></div>
-                <div id="navigationitem"><a href="https://sites.google.com/nau.edu/ai-telehealth/home">Project Specificatioin</a></div>
-                <div id="navigationitem"><a href="/#System">System Experience</a></div>
-                <div id="navigationitem"><a href="/#pure-prediction">AI Diagnose Experience</a></div>
-                <div id="navigationitem"><a href="https://ceias.nau.edu/capstone/d4p/">NAU Capstone Page</a></div>
+                    <div id="navigationitem"><a href="/">Home</a></div>
+                    <div id="navigationitem"><a href="https://sites.google.com/nau.edu/ai-telehealth/home">Project Specificatioin</a></div>
+                    <div id="navigationitem"><a href="/#System">System Experience</a></div>
+                    <div id="navigationitem"><a href="/#pure-prediction">AI Diagnose Experience</a></div>
+                    <div id="navigationitem"><a href="https://ceias.nau.edu/capstone/d4p/">NAU Capstone Page</a></div>
                 </div>
             </p>
         </nav>
@@ -28,32 +28,38 @@
         <h1>AI-Telehealth(Test Page)<sup style="font-size: medium;">by Tech-health Comparator Group</sup></h1>
         <br>
 
-        <div>
-            <a href="https://www.researchgate.net/publication/377103421_High-accuracy_fine-tuned_vision_transformer_model_for_diagnosing_COVID-19_from_chest_X-ray_images"><p style="text-align: left;">Our Research Paper: High-accuracy fine-tuned vision transformer model for diagnosing COVID-19 from chest X-ray images</p></a>
+        <div style="text-align: left;"><p>Our Research Paper(s): </p><br>
+            <a href="https://doi.org/10.1016/j.health.2024.100332" style="position: relative; top: -30px">A vision transformer machine learning model for COVID-19 diagnosis using chest X-ray images (Officially published at Healthcare Analytics (Journal))</a><br>
+            <a href="https://www.researchgate.net/publication/377103421_High-accuracy_fine-tuned_vision_transformer_model_for_diagnosing_COVID-19_from_chest_X-ray_images" style="position: relative; top: -10px">High-accuracy fine-tuned vision transformer model for diagnosing COVID-19 from chest X-ray images (Preprint Version)</a>
         </div>
         
         <hr>
         <hr>
         <section id="System">
-        <br><br>
+        <br>
         <div id="test">
             <br>
-            <p>Currently it's just for tesing.</p>
+            <p>Images Used for Online Testing. Click the botton to download corresponding image.</p>
             <div id="test-img-download">
-                <button>
+                <button class="testImage">
                     <a href="static/sample_imgs/COVID-3587.png" download="COVID-you can randomly name it - Name is just for verification.png">COVID-19 Sample</a>
                 </button>
-                <button>
+                <button class="testImage">
                     <a href="static/sample_imgs/Lung_Opacity-5994.png" download="Lung Opacity-you can randomly name it - Name is just for verification.png">Lung Opacity Sample</a>
                 </button>
-                <button>
+                <button class="testImage">
                     <a href="static/sample_imgs/Normal-10182.png" download="Normal-you can randomly name it - Name is just for verification.png">Normal Sample</a>
                 </button>
-                <button>
+                <button class="testImage">
                     <a href="static/sample_imgs/Viral Pneumonia-1254.png" download="Viral Pneumonia-you can randomly name it - Name is just for verification.png">Viral Pneumonia (non-COVID infection) Sample</a>
                 </button>
             </div>
-            <div id="download-test"><button><a href="static/encrypted_data.zip" download="cypher_text.zip">Download Test: this is the cypher text package from the encrypted image</a></button></div>
+            <br>
+
+            <div id="download-test">
+                <p>Sample cyphertext package which goes through our proposed system:</p>
+                <button><a href="static/encrypted_data.zip" download="cypher_text.zip">Download Test: this is the cypher text package from the encrypted image</a></button>
+            </div>
             <br>
             <hr>
         </div>
@@ -61,14 +67,14 @@
 
         <div id="system-graph">
             <img src="static/System.png" alt="System" width="90%">
-            <p><b>The Whole System Workflow</b></p>
-        </div>
-
-        <div>
-            <img src="static/dataset_img_display.png" alt="Dataset Example" width="90%">
-            <p style="text-align: center; font-size: medium;">Dataset Samples</p>
+            <p style="position: relative; top: -10px;"><b>The Whole System Workflow</b></p>
         </div>
         
+        <div id="datasetImg">
+            <img src="static/dataset_img_display.png" alt="Dataset Example" width="90%">
+            <p style="text-align: center; font-size: medium; position: relative; top: -10px;">Dataset Samples</p>
+        </div>
+    
         <div>
             <img src="static/ViT structure Paper.png" alt="Our Proposed Model" width="90%">
             <p style="text-align: center; font-size: medium;">The Proposed Model from Our Research (95.79% Accuracy)</p>
@@ -86,7 +92,9 @@
                 <br><br>
                 
                 <p>The prediction result of uploaded image is: <div id="prediction">waiting to be uploaded</div></p>
-
+                <div style="display: grid; justify-content: center;">
+                    <img alt="" id="resultViz" src="static/Confusion Matrix.png" style="display: none; max-width: 200px;">
+                </div>
                 <input type="submit" value="Upload (after you choose file)">
             </form>        
         </div>
