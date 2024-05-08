@@ -20,7 +20,7 @@ reload the systemd file service table: ```systemctl daemon-reload``` <br>
 1. Multiple port connections are built between client and server
 2. Amazon Server Blackout
 3. Bugs in the client (check feedback from local Flask terminal), highly encourage for backup in each successfully deployment stage
-4. Unware of changing of public IP address by Amazon, since it's a free service
+4. Unaware of changing of public IP address by Amazon, since it's a free service
 5. Run incorrect frp command/configuration files
 6. Figure out whether your service is HTTP or HTTPS! This is important since it can decide which http:// or https:// can be accessed.
 7. Try to switch your network. Sometimes the bad connection is due to the network.
