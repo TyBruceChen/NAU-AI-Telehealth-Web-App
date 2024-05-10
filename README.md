@@ -14,7 +14,10 @@ python app.py
 Install systemd:  ```sudo apt-get systemd``` <br>
 Enable systemd ```file.service``` run from booting: ```systemctl enable file.service``` <br>
 Stop/Start/Check status: repalce ```enable``` with ```stop/start/status``` <br>
-reload the systemd file service table: ```systemctl daemon-reload``` <br>
+reload the systemd file service table: ```systemctl daemon-reload``` <be>
+
+## How the web app actually looks like:
+![AI Telehealth Flask Web App1](https://github.com/TyBruceChen/NAU-AI-Telehealth-Web-App/assets/152252677/5a429904-2cc3-40c6-8c9f-5e9ec274560d)
 
 
 ## Debugging:
