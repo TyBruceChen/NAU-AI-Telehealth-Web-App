@@ -7,6 +7,10 @@ For this stage of the web app, content has been finalized
 
 ## Instruction:
 
+**Run the server from the script:**
+python app.py
+
+**Run once the computer starts:**
 Install systemd:  ```sudo apt-get systemd``` <br>
 Enable systemd ```file.service``` run from booting: ```systemctl enable file.service``` <br>
 Stop/Start/Check status: repalce ```enable``` with ```stop/start/status``` <br>
