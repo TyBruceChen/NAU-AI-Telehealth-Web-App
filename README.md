@@ -3,7 +3,7 @@ This is an applied artificial intelligence project under the supervision of [the
 
 ## News in this version:
 
-For this stage of the web app, content has been finalized
+For this stage of the web app, content has been finalized. (Without crypto part)
 
 ## Instruction:
 
