@@ -1,5 +1,6 @@
 # NAU-Cap-AI-Telehealth-Web-App
 This is an applied artificial intelligence project under the supervision of [the Digital Systems Design Laboratory of NAU](https://www.dsdlab.nau.edu/): [AI-Telehealth](https://sites.google.com/nau.edu/ai-telehealth/home), users can get the diagnosis of COVID-19 by uploading a chest X-ray image (better resolution of 224*224). Flask python is used  for building local users, [frp](https://github.com/fatedier/frp) is used to expose it, and Amazon EC2 instance is in charge of publishing it to the public Internet.
+This online realization is based on the product of our research: [A Vision Transformer Machine Learning Model for COVID-19 Dagnosis Using Chest X-Ray Images](https://github.com/TyBruceChen/Research-A-Vision-Transformer-Machine-Learning-Model-for-COVID-19-Dagnosis-Using-Chest-X-Ray-Images).
 
 ## News in this version:
 
